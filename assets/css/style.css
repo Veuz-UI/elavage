@@ -416,6 +416,7 @@ p {
 
   .watch-video{
 	text-align: end;
+	margin-top: -200px;
 	/* margin-top: -130px;
 	padding-right: 130px; */
   	position: relative;
@@ -525,7 +526,7 @@ p {
   .outr-video{
 	position: absolute;
 	right: 0;
-	top: -700px;
+	top: -600px;
 	z-index: -2;
   }
 
