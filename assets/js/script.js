@@ -1,22 +1,5 @@
 
 
-// -------smooth scroll-------//
-
-
-
-// -------smooth scroll-------//
-
-
-
-
-// -------menu-------//
-
-
-
-
-
-// -------menu-------//
-
 // -------accordian-----//
 const accordions = document.querySelectorAll('.accordion-header');
 
@@ -36,43 +19,7 @@ accordions.forEach(accordion => {
 
 // -------accordian-----//
 
-//---counter----//
-let counter = document.querySelectorAll(".counter")
-let arr = Array.from(counter)
-
-arr.map((item)=>{
-    let count = 0
-
-    function CounterUp(){
-        count++
-        item.innerHTML = count
-        if(count == item.dataset.number){
-            clearInterval(stop);
-        }
-    }
-    let stop = setInterval(
-        function(){
-            CounterUp();
-        },100/item.dataset.speed
-    );
-})
-
-//---rotation----//
-// let angle = 0; function rotateImage() { 
-//     angle = (angle + 1) % 180; 
-//     document.getElementById('image').style.transform = `rotate(${angle}deg)`; 
-//   } setInterval(rotateImage, 10);
-
-
-// let goingUp = true; function jumpImage() { 
-//     const image = document.getElementById('image'); if (goingUp) { image.style.top = '0';
-//      } else { 
-//         image.style.top = '50%'; 
-//     } goingUp = !goingUp; 
-// } setInterval(jumpImage, 1000);
-
 //about image jump
-
 let goingUp = true; 
 function jumpImage() { 
     const image = document.getElementById('image'); 
@@ -83,11 +30,9 @@ function jumpImage() {
     } 
     goingUp = !goingUp; 
 } setInterval(jumpImage, 1000);
-
 //end
 
 // product-slider
-
 $('.pfolio .owl-carousel').owlCarousel({
     loop: true,
     margin: 30,
@@ -116,7 +61,6 @@ $('.pfolio .owl-carousel').owlCarousel({
       }
     }
   })
-  
   // close
 
 
@@ -152,6 +96,30 @@ $('.pfolio .owl-carousel').owlCarousel({
   
   // close
 
+//cursor pointer
+$(window).mousemove(function (e) {
+	$(".ring").css(
+		"transform",
+		`translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`
+	);
+});
+//END cursor pointer
+
+/*---returnTop-----*/
+// Show button after scrolling down 20px
+window.onscroll = function() {
+  const topButton = document.getElementById("topButton");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+};
+
+// Function to scroll to the top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 
 
