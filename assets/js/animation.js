@@ -75,18 +75,33 @@ gsap.registerPlugin(ScrollTrigger);
     },
   });
 
-gsap.from(".about-sec", {
+// gsap.from(".about-sec", {
+//   duration: 1,
+//   x:300,
+//   opacity:0,
+//   stagger: 3,
+//   scrollTrigger: {
+//     trigger: ".about-sec",
+//     start: "center 130%",
+//     end:"center 0%",
+//     scrub: true, 
+//     markers: false,
+//     toggleActions: "play reverse play reverse",
+//   },
+// });
+
+gsap.from(".about-content", {
   duration: 1,
-  x:300,
-  opacity:0,
-  stagger: 3,
+  x: 300,
+  opacity: 0,
+  stagger: 0.3,
   scrollTrigger: {
-    trigger: ".about-sec",
-    start: "center 130%",
-    end:"center 0%",
+    trigger: ".about-content",
+    start: "top 80%",
+    end: "top 20%",
     scrub: true, 
-    markers: false,
-    toggleActions: "play reverse play reverse",
+    markers: false, // Set to true for debugging
+    toggleActions: "play none none reverse",
   },
 });
 
