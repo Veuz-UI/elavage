@@ -29,20 +29,20 @@ menuButton.addEventListener('click', () => {
     body.classList.remove('no-scroll');
     
     gsap.to(menuItems, { duration: 0.3, opacity: 0, x: 20, stagger: -0.1 });
-    gsap.to(menuOverlay, { duration: 0.5, right: '-50%', delay: 0.2 });
-    gsap.to(topOverlay, { duration: 0.5, top: '-100%', delay: 0.7, ease: 'power3.in' });
+    gsap.to(menuOverlay, { duration: 0.5, right: '-50%', delay: 0.5 });
+    gsap.to(topOverlay, { duration: 0.5, top: '-100%', delay: 0.10, ease: 'power3.in' });
   }
 
   isOpen = !isOpen;
   menuButton.classList.toggle('open', isOpen);
 });
 
+
+
 // menu open close //
 
 
-
 //Animations
-
 gsap.registerPlugin(ScrollTrigger);
 
   gsap.from(".pfolio .owl-carousel .item", {
@@ -75,21 +75,6 @@ gsap.registerPlugin(ScrollTrigger);
     },
   });
 
-// gsap.from(".about-sec", {
-//   duration: 1,
-//   x:300,
-//   opacity:0,
-//   stagger: 3,
-//   scrollTrigger: {
-//     trigger: ".about-sec",
-//     start: "center 130%",
-//     end:"center 0%",
-//     scrub: true, 
-//     markers: false,
-//     toggleActions: "play reverse play reverse",
-//   },
-// });
-
 gsap.from(".about-content", {
   duration: 1,
   x: 300,
@@ -100,7 +85,7 @@ gsap.from(".about-content", {
     start: "top 80%",
     end: "top 20%",
     scrub: true, 
-    markers: false, // Set to true for debugging
+    markers: false,
     toggleActions: "play none none reverse",
   },
 });
