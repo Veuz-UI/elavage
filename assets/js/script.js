@@ -241,5 +241,6 @@ icon.addEventListener('mouseleave', () => {
 });
 
 
-//window scrollbar right
+
+
 
